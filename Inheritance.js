@@ -48,4 +48,10 @@ class Student extends Person {
         super.displayInfo();
         console.log("Program: " + this.program);
     }
+    // Extending the displayInfoHTML method
+    displayInfoHTML() {
+        super.displayInfoHTML();
+        const personElement = document.getElementById('personOne');
+        personElement.innerHTML += `<br><strong>Major:</strong> ${this.program}`;
+    }
 }
