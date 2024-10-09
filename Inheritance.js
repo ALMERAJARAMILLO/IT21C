@@ -38,3 +38,9 @@ class Person {
         `;
     }
 }
+class Student extends Person {
+    constructor(name, age, hobbies, program) {
+        super(name, age, hobbies);
+        this.program = program;
+    }
+}
