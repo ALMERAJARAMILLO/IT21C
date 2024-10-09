@@ -60,4 +60,9 @@
                 super(name, age, hobbies);
                 this.major = program;
             }
+            // Overriding the displayInfo method
+            displayInfo() {
+                super.displayInfo();
+                console.log("Program: " + this.program);
+            }
         }

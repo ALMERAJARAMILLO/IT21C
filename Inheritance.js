@@ -43,4 +43,9 @@ class Student extends Person {
         super(name, age, hobbies);
         this.program = program;
     }
+    // Overriding the displayInfo method
+    displayInfo() {
+        super.displayInfo();
+        console.log("Program: " + this.program);
+    }
 }
