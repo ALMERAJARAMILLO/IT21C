@@ -22,4 +22,10 @@ class Person {
     get hobbies() {
         return this.#hobbies;
     }
+    // Method to display person information in the console
+    displayInfo() {
+        console.log("Name: " + this.name);
+        console.log("Age: " + this.age);
+        console.log("Hobbies: " + this.hobbies);
+    }
 }
