@@ -25,7 +25,7 @@ class ChartCreator {
         throw new Error('createCharts() must be implemented in subclasses');
     }
 }
-    class LineChart extends ChartCreator {
+class LineChart extends ChartCreator {
     constructor(dataUrl) {
         super(dataUrl);
         this.areaCtx = document.getElementById('areaChart');
@@ -58,3 +58,7 @@ class ChartCreator {
         });
     }
 }
+const lineChartCreator = new LineChart('Data.json');
+lineChartCreator.init();
+
+console.log(lineChartCreator.dataUrl);
