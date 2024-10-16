@@ -3,12 +3,12 @@ class Person {
     //Private Fields
     #name;
     #age;
-    #hobbies;
+    #hobby;
 
-    constructor(name, age, hobbies) {
+    constructor(name, age, hobby) {
         this.#name = name;
         this.#age = age;
-        this.#hobbies = hobbies;
+        this.#hobby = hobby;
     }
     //Getters
     get name() {
@@ -20,13 +20,13 @@ class Person {
     }
 
     get hobby() {
-        return this.#hobbies;
+        return this.#hobby;
     }
     // Method to display person information in the console
     displayInfo() {
         console.log("Name: " + this.name);
         console.log("Age: " + this.age);
-        console.log("Hobbies: " + this.hobbies);
+        console.log("Hobby: " + this.hobby);
     }
     // Method to display person information in the HTML
     displayInfoHTML() {
@@ -34,7 +34,7 @@ class Person {
         personElement.innerHTML = `
             <strong>Name:</strong> ${this.name}<br>
             <strong>Age:</strong> ${this.age}<br>
-            <strong>Hobby:</strong> ${this.hobbies}
+            <strong>Hobby:</strong> ${this.hobby}
         `;
     }
 }

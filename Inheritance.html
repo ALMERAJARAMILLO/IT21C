@@ -20,12 +20,12 @@
             //Private Fields
             #name;
             #age;
-            #hobbies;
+            #hobby;
 
-            constructor(name, age, hobbies) {
+            constructor(name, age, hobby) {
                 this.#name = name;
                 this.#age = age;
-                this.#hobbies = hobbies;
+                this.#hobby = hobby;
             }
             //Getters
             get name() {
@@ -36,14 +36,14 @@
                 return this.#age;
             }
 
-            get hobbies() {
-                return this.#hobbies;
+            get hobby() {
+                return this.#hobby;
             }
             // Method to display person information in the console
             displayInfo() {
                 console.log("Name: " + this.name);
                 console.log("Age: " + this.age);
-                console.log("Hobbies: " + this.hobbies);
+                console.log("Hobby: " + this.hobby);
             }
             // Method to display person information in the HTML
             displayInfoHTML() {
@@ -51,14 +51,14 @@
                 personElement.innerHTML = `
             <strong>Name:</strong> ${this.name}<br>
             <strong>Age:</strong> ${this.age}<br>
-            <strong>Hobbies:</strong> ${this.hobbies}
+            <strong>Hobby:</strong> ${this.hobby}
         `;
             }
         }
         class Student extends Person {
-            constructor(name, age, hobbies, program) {
-                super(name, age, hobbies);
-                this.major = program;
+            constructor(name, age, hobby, program) {
+                super(name, age, hobby);
+                this.program = program;
             }
             // Overriding the displayInfo method
             displayInfo() {
